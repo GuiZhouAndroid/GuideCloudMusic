@@ -85,7 +85,7 @@
             android:background="@drawable/welcome_shape_color_next"
             android:gravity="center"
             android:minEms="7"
-            android:onClick="onMain"
+            android:onClick="tv_welcome"
             android:text="右滑进入>>"
             android:textColor="@color/welcome_colorMain"
             android:textSize="14sp"

@@ -95,7 +95,6 @@ public class WelcomeActivity extends AppCompatActivity {
                     case 1:
 
 
-
                         if (!tv_login.getText().toString().isEmpty() || !tv_go.getText().toString().isEmpty() || !tv_welcome.getText().toString().isEmpty()) {
 
                             tv_login.setText("");
@@ -159,25 +158,24 @@ public class WelcomeActivity extends AppCompatActivity {
                         Point size = new Point();
                         windowManager.getDefaultDisplay().getSize(size);
                         int width = size.x;
-                        if (startX - endX >= (width / 8)) {// startX - endX 大于0 且大于宽的1/8 可以往后翻页
-                            if (pageIndex == 0) {
-                                mImageViewPager.setCurrentItem(1);
-                                mTextPager.setCurrentItem(1, true);
-                            } else if (pageIndex == 1) {
-                                mImageViewPager.setCurrentItem(2);
-                                mTextPager.setCurrentItem(2, true);
-                            } else if (pageIndex == 2) { //ViewPager在最后一页滑动之后，跳转到主页面
+                        if (startX - endX >= (width / 8)) {// startX - endX 大于0 且大于宽的1/8 往后翻页(往左滑)
+                            if (pageIndex == 0) { //第一页时
+                                mImageViewPager.setCurrentItem(1,true); //图片动画
+                                mTextPager.setCurrentItem(1, true);//文字滑动
+                            } else if (pageIndex == 1) { //第二页时
+                                mImageViewPager.setCurrentItem(2,true);//图片动画
+                                mTextPager.setCurrentItem(2, true);//文字滑动
+                            } else if (pageIndex == 2) { //第三页时——最后一页ViewPager滑动之后，跳转到主页面
                                 startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
+                                //不finish()，用户进入主页面后，可能返回登录操作
                             }
-
-                        } else if (endX - startX >= (width / 8)) { // endX - startX   大于0 且大于宽的1/8 可以往前翻页
-                            if (pageIndex == 2) {
-                                mImageViewPager.setCurrentItem(1);
-                                mTextPager.setCurrentItem(1, true);
-
+                        } else if (endX - startX >= (width / 8)) { // endX - startX   大于0 且大于宽的1/8 往前翻页(往右滑)
+                            if (pageIndex == 2) { //第二页时
+                                mImageViewPager.setCurrentItem(1,true);//图片动画
+                                mTextPager.setCurrentItem(1, true);//文字滑动
                             } else if (pageIndex == 1) {
-                                mImageViewPager.setCurrentItem(0);
-                                mTextPager.setCurrentItem(0, true);
+                                mImageViewPager.setCurrentItem(0,true);//图片动画
+                                mTextPager.setCurrentItem(0, true);//文字滑动
                             }
                         }
                         break;
@@ -192,7 +190,23 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     public void onMain(View view) {
-        Toast.makeText(this, "立即体验", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
+    }
+
+    /**
+     * 右滑进入下一页
+     * 第三页View.GONE隐藏，不需要判断
+     *
+     * @param view
+     */
+    public void tv_welcome(View view) {
+        if (pageIndex == 0) {  //第一页，点击时
+            mTextPager.setCurrentItem(1, true); //文字动画跳转第二页
+            mImageViewPager.setCurrentItem(1, true);//图片动画跳转第二页
+        } else if (pageIndex == 1) { //第二页，点击时
+            mTextPager.setCurrentItem(2, true);//文字动画跳转第三页
+            mImageViewPager.setCurrentItem(2, true);//图片动画跳转第三页
+        }
     }
 
     @Override
