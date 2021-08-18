@@ -1,4 +1,4 @@
-package com.zs.itking.guidecloudmusic;
+package com.zs.itking.guidecloudmusic.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.zs.itking.guidecloudmusic.R;
 import com.zs.itking.guidecloudmusic.adapter.MyFragmentPagerAdapter;
 import com.zs.itking.guidecloudmusic.adapter.TextPagerAdapter;
 import com.zs.itking.guidecloudmusic.welcome.FixedSpeedScroller;

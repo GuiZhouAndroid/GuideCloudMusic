@@ -6,7 +6,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
-import com.zs.itking.guidecloudmusic.WelcomeActivity;
+import com.zs.itking.guidecloudmusic.activity.WelcomeActivity;
 import com.zs.itking.guidecloudmusic.R;
 import com.zs.itking.guidecloudmusic.welcome.LazyLoadFragment;
 
