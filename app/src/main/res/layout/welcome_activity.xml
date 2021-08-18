@@ -86,25 +86,27 @@
             android:orientation="horizontal">
 
             <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_login"
                 android:layout_width="wrap_content"
                 android:layout_height="36dp"
                 android:layout_marginRight="20dp"
                 android:background="@drawable/welcome_shape_gradient_login"
                 android:gravity="center"
                 android:minEms="7"
-                android:text="登录/注册"
                 android:onClick="onLogin"
                 android:textColor="@color/welcome_colorWhite"
                 android:textSize="13sp" />
 
             <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_go"
                 android:layout_width="wrap_content"
                 android:layout_height="36dp"
                 android:background="@drawable/welcome_shape_color_next"
                 android:gravity="center"
                 android:minEms="7"
                 android:onClick="onMain"
-                android:text="立即体验"
                 android:textColor="@color/welcome_colorMain"
                 android:textSize="13sp" />
         </LinearLayout>
