@@ -4,10 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ZSAndroid/Desktop/GuideCloudMusic/app/src/main/res/drawable/welcome_circle_gray.xml" value="0.34629629629629627" />
+        <entry key="..\:/Users/ZSAndroid/Desktop/GuideCloudMusic/app/src/main/res/drawable/welcome_circle_main.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/ZSAndroid/Desktop/GuideCloudMusic/app/src/main/res/drawable/welcome_shape_color_next.xml" value="0.35648148148148145" />
+        <entry key="..\:/Users/ZSAndroid/Desktop/GuideCloudMusic/app/src/main/res/drawable/welcome_shape_gradient_login.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/ZSAndroid/Desktop/GuideCloudMusic/app/src/main/res/layout/activity_main.xml" value="0.17806484295845998" />
-        <entry key="..\:/Users/ZSAndroid/Desktop/GuideCloudMusic/app/src/main/res/layout/welcome_activity.xml" value="0.17806484295845998" />
+        <entry key="..\:/Users/ZSAndroid/Desktop/GuideCloudMusic/app/src/main/res/layout/welcome_activity.xml" value="0.33" />
+        <entry key="..\:/Users/ZSAndroid/Desktop/GuideCloudMusic/app/src/main/res/layout/welcome_adapter_item_page_text.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/ZSAndroid/Desktop/GuideCloudMusic/app/src/main/res/layout/welcome_frgament_one_page.xml" value="0.17806484295845998" />
       </map>
     </option>
   </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>

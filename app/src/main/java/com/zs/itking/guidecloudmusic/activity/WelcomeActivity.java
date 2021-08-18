@@ -37,7 +37,7 @@ public class WelcomeActivity extends AppCompatActivity {
     MyInterceptViewPager mImageViewPager;//图片
     RelativeLayout mTouchLayout;//点击分发
     ImageView mIndicatorOne, mIndicatorTwo, mIndicatorThree;
-    TextView tv_login, tv_go;
+    TextView tv_login, tv_go, tv_welcome;
     int pageIndex = 0;
 
     @SuppressLint("ClickableViewAccessibility")
@@ -56,7 +56,7 @@ public class WelcomeActivity extends AppCompatActivity {
         mIndicatorThree = findViewById(R.id.main_indicator_three);
         tv_login = findViewById(R.id.tv_login);
         tv_go = findViewById(R.id.tv_go);
-
+        tv_welcome = findViewById(R.id.tv_welcome);
         try {
             Field field = ViewPager.class.getDeclaredField("mScroller");//反射
             field.setAccessible(true);
@@ -85,24 +85,44 @@ public class WelcomeActivity extends AppCompatActivity {
                 mIndicatorThree.setImageDrawable(getResources().getDrawable(R.drawable.welcome_circle_gray));
                 switch (i) {
                     case 0:
+
+                        tv_welcome.setText("右滑进入>>");
+                        tv_welcome.setVisibility(View.VISIBLE);
+
                         SHOW_TWO_ANIM = true;
                         mIndicatorOne.setImageDrawable(getResources().getDrawable(R.drawable.welcome_circle_main));//第一页滑动圆点
                         break;
                     case 1:
-                        if (!tv_login.getText().toString().isEmpty() || !tv_go.getText().toString().isEmpty()) {
-                            tv_login.setVisibility(View.INVISIBLE);
+
+
+
+                        if (!tv_login.getText().toString().isEmpty() || !tv_go.getText().toString().isEmpty() || !tv_welcome.getText().toString().isEmpty()) {
+
                             tv_login.setText("");
-                            tv_go.setVisibility(View.INVISIBLE);
+                            tv_login.setVisibility(View.GONE);
+
                             tv_go.setText("");
+                            tv_go.setVisibility(View.GONE);
+
+                            tv_welcome.setText("右滑进入>>");
+                            tv_welcome.setVisibility(View.VISIBLE);
                         }
                         mIndicatorTwo.setImageDrawable(getResources().getDrawable(R.drawable.welcome_circle_main));//第二页滑动圆点
                         break;
                     case 2:
-                        if (tv_login.getText().toString().isEmpty() && tv_go.getText().toString().isEmpty()) {
+
+
+                        if (tv_login.getText().toString().isEmpty() && tv_go.getText().toString().isEmpty() || tv_welcome.getText().toString().isEmpty()) {
+
                             tv_login.setText("登录/注册");
                             tv_login.setVisibility(View.VISIBLE);
+
                             tv_go.setText("进入主页");
                             tv_go.setVisibility(View.VISIBLE);
+
+                            tv_welcome.setText("");
+                            tv_welcome.setVisibility(View.GONE);
+
                         }
                         SHOW_TWO_ANIM = false;
                         mIndicatorThree.setImageDrawable(getResources().getDrawable(R.drawable.welcome_circle_main));//第三页滑动圆点

@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".activity.WelcomeActivity">
 
     <LinearLayout
@@ -21,25 +20,20 @@
     </LinearLayout>
 
     <com.zs.itking.guidecloudmusic.welcome.MyInterceptViewPager
+
         android:id="@+id/main_text_pager"
         android:layout_width="match_parent"
         android:layout_height="@dimen/welcome_activity_textpager_height"
         android:layout_marginTop="@dimen/welcome_activity_textpager_margin_top"
-        android:overScrollMode="never"
-        />
-
-
+        android:overScrollMode="never" />
 
     <com.zs.itking.guidecloudmusic.welcome.MyInterceptViewPager
         android:id="@+id/main_image_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/welcome_fragment_margin_bottom"
         android:layout_below="@+id/main_text_pager"
-        android:layout_marginTop="10dp"
-        android:overScrollMode="never"/>
-
-
+        android:layout_marginBottom="@dimen/welcome_fragment_margin_bottom"
+        android:overScrollMode="never" />
 
     <RelativeLayout
         android:id="@+id/main_touch_layout"
@@ -51,55 +45,73 @@
         android:layout_height="@dimen/welcome_fragment_margin_bottom"
         android:layout_alignParentBottom="true"
         android:orientation="vertical"
-        android:paddingBottom="30dp">
+        android:layout_marginBottom="30dp">
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:layout_marginBottom="20dp"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
+
             <ImageView
                 android:id="@+id/main_indicator_one"
                 android:layout_width="wrap_content"
-                android:src="@drawable/welcome_circle_main"
-                android:layout_marginRight="6dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/welcome_circle_main" />
+
             <ImageView
                 android:id="@+id/main_indicator_two"
                 android:layout_width="wrap_content"
-                android:src="@drawable/welcome_circle_gray"
-                android:layout_marginRight="6dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/welcome_circle_gray" />
+
             <ImageView
                 android:id="@+id/main_indicator_three"
                 android:layout_width="wrap_content"
-                android:src="@drawable/welcome_circle_gray"
-                android:layout_marginRight="6dp"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/welcome_circle_gray" />
 
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="40dp"
+            android:id="@+id/tv_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:background="@drawable/welcome_shape_color_next"
+            android:gravity="center"
+            android:minEms="7"
+            android:onClick="onMain"
+            android:text="右滑进入>>"
+            android:textColor="@color/welcome_colorMain"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
         <LinearLayout
+            android:layout_marginTop="40dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="36dp"
             android:gravity="center"
             android:orientation="horizontal">
 
             <TextView
-                android:visibility="gone"
                 android:id="@+id/tv_login"
                 android:layout_width="wrap_content"
                 android:layout_height="36dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
                 android:background="@drawable/welcome_shape_gradient_login"
                 android:gravity="center"
                 android:minEms="7"
                 android:onClick="onLogin"
                 android:textColor="@color/welcome_colorWhite"
-                android:textSize="13sp" />
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:textStyle="bold"/>
 
             <TextView
-                android:visibility="gone"
                 android:id="@+id/tv_go"
                 android:layout_width="wrap_content"
                 android:layout_height="36dp"
@@ -108,7 +120,9 @@
                 android:minEms="7"
                 android:onClick="onMain"
                 android:textColor="@color/welcome_colorMain"
-                android:textSize="13sp" />
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:textStyle="bold"/>
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
