@@ -29,7 +29,7 @@ public class FragmentOnePage extends LazyLoadFragment {
 
     @Override
     protected int setContentView() {
-        return R.layout.frgamnet_onepage;
+        return R.layout.welcome_frgament_one_page;
     }
 
     @Override

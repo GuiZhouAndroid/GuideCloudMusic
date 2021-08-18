@@ -19,21 +19,21 @@ public class TextPagerAdapter extends PagerAdapter {
     private final static int PAGE_COUNT = 3;
     @Override
     public Object instantiateItem(ViewGroup collection, int position) {
-        View view = LayoutInflater.from(collection.getContext()).inflate(R.layout.pager_adapter_text, null);
+        View view = LayoutInflater.from(collection.getContext()).inflate(R.layout.welcome_adapter_item_page_text, null);
         TextView mTitle = view.findViewById(R.id.pager_text_title);
         TextView mInfo = view.findViewById(R.id.pager_text_info);
         switch (position) {
             case 0:
-                mTitle.setText(collection.getResources().getString(R.string.guid_text_one_title));
-                mInfo.setText(collection.getResources().getString(R.string.guid_text_one_info));
+                mTitle.setText(collection.getResources().getString(R.string.welcome_guid_text_one_title));
+                mInfo.setText(collection.getResources().getString(R.string.welcome_guid_text_one_info));
                 break;
             case 1:
-                mTitle.setText(collection.getResources().getString(R.string.guid_text_two_title));
-                mInfo.setText(collection.getResources().getString(R.string.guid_text_two_info));
+                mTitle.setText(collection.getResources().getString(R.string.welcome_guid_text_two_title));
+                mInfo.setText(collection.getResources().getString(R.string.welcome_guid_text_two_info));
                 break;
             case 2:
-                mTitle.setText(collection.getResources().getString(R.string.guid_text_three_title));
-                mInfo.setText(collection.getResources().getString(R.string.guid_text_three_info));
+                mTitle.setText(collection.getResources().getString(R.string.welcome_guid_text_three_title));
+                mInfo.setText(collection.getResources().getString(R.string.welcome_guid_text_three_info));
                 break;
             default:
                 break;

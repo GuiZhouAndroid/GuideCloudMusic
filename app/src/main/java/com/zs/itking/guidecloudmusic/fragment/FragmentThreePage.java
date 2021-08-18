@@ -6,7 +6,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
-import com.zs.itking.guidecloudmusic.MainActivity;
+import com.zs.itking.guidecloudmusic.WelcomeActivity;
 import com.zs.itking.guidecloudmusic.R;
 import com.zs.itking.guidecloudmusic.welcome.LazyLoadFragment;
 
@@ -30,8 +30,8 @@ public class FragmentThreePage extends LazyLoadFragment {
     protected void initView(Bundle savedInstanceState) {
         mBgView = findViewById(R.id.image_three_bg);
         mShowView = findViewById(R.id.image_three_show);
-        mShowAnim = AnimationUtils.loadAnimation(getActivity(), R.anim.trans_three_bottom_up);
-        mAlphaAnim   = AnimationUtils.loadAnimation(getActivity(), R.anim.alpha);
+        mShowAnim = AnimationUtils.loadAnimation(getActivity(), R.anim.welcome_trans_three_bottom_up);
+        mAlphaAnim   = AnimationUtils.loadAnimation(getActivity(), R.anim.welcome_alpha);
         mBgView.setVisibility(View.INVISIBLE);
         mShowView.setVisibility(View.INVISIBLE);
 
@@ -39,12 +39,12 @@ public class FragmentThreePage extends LazyLoadFragment {
 
     @Override
     protected int setContentView() {
-        return R.layout.frgamnet_threepage;
+        return R.layout.welcome_frgament_three_page;
     }
 
     @Override
     protected void lazyLoad() {
-        MainActivity.SHOW_TWO_ANIM = false;
+        WelcomeActivity.SHOW_TWO_ANIM = false;
         mBgView.post(new Runnable() {
             @Override
             public void run() {

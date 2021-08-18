@@ -22,7 +22,7 @@ import com.zs.itking.guidecloudmusic.welcome.MyInterceptViewPager;
 
 import java.lang.reflect.Field;
 
-public class MainActivity extends AppCompatActivity {
+public class WelcomeActivity extends AppCompatActivity {
     public static boolean SHOW_TWO_ANIM = true;//第二个界面是否展示动画 网易云音乐 3->2时 2没展示动画效果
     MyInterceptViewPager mTextPager;//文字
     MyInterceptViewPager mImageViewPager;//图片
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.welcome_activity);
         mTextPager = findViewById(R.id.main_text_pager);
         mImageViewPager = findViewById(R.id.main_image_pager);
         mTouchLayout = findViewById(R.id.main_touch_layout);
@@ -62,20 +62,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int i) {
                 pageIndex = i;
-                mIndicatorOne.setImageDrawable(getResources().getDrawable(R.drawable.circle_gray));
-                mIndicatorTwo.setImageDrawable(getResources().getDrawable(R.drawable.circle_gray));
-                mIndicatorThree.setImageDrawable(getResources().getDrawable(R.drawable.circle_gray));
+                mIndicatorOne.setImageDrawable(getResources().getDrawable(R.drawable.welcome_circle_gray));
+                mIndicatorTwo.setImageDrawable(getResources().getDrawable(R.drawable.welcome_circle_gray));
+                mIndicatorThree.setImageDrawable(getResources().getDrawable(R.drawable.welcome_circle_gray));
                 switch (i){
                     case 0:
                         SHOW_TWO_ANIM = true;
-                        mIndicatorOne.setImageDrawable(getResources().getDrawable(R.drawable.circle_main));
+                        mIndicatorOne.setImageDrawable(getResources().getDrawable(R.drawable.welcome_circle_main));
                         break;
                     case 1:
-                        mIndicatorTwo.setImageDrawable(getResources().getDrawable(R.drawable.circle_main));
+                        mIndicatorTwo.setImageDrawable(getResources().getDrawable(R.drawable.welcome_circle_main));
                         break;
                     case 2:
                         SHOW_TWO_ANIM = false;
-                        mIndicatorThree.setImageDrawable(getResources().getDrawable(R.drawable.circle_main));
+                        mIndicatorThree.setImageDrawable(getResources().getDrawable(R.drawable.welcome_circle_main));
                         break;
                 }
 

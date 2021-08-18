@@ -5,7 +5,7 @@
 
        android:useLevel="false">
 
-    <solid android:color="@color/colorMain"/>
+    <solid android:color="@color/welcome_colorMain"/>
 
 
     <size

@@ -6,7 +6,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
-import com.zs.itking.guidecloudmusic.MainActivity;
+import com.zs.itking.guidecloudmusic.WelcomeActivity;
 import com.zs.itking.guidecloudmusic.R;
 import com.zs.itking.guidecloudmusic.welcome.LazyLoadFragment;
 
@@ -32,18 +32,18 @@ public class FragmentTwoPage extends LazyLoadFragment {
         mBgView = findViewById(R.id.image_two_bg);
         mShowView = findViewById(R.id.image_two_show);
         mHeadView = findViewById(R.id.image_two_head);
-        mShowAnim = AnimationUtils.loadAnimation(getActivity(), R.anim.trans_two_bottom_up);
-        mAlphaAnim   = AnimationUtils.loadAnimation(getActivity(), R.anim.alpha);
+        mShowAnim = AnimationUtils.loadAnimation(getActivity(), R.anim.welcome_trans_two_bottom_up);
+        mAlphaAnim   = AnimationUtils.loadAnimation(getActivity(), R.anim.welcome_alpha);
     }
 
     @Override
     protected int setContentView() {
-        return R.layout.frgamnet_twopage;
+        return R.layout.welcome_frgament_two_page;
     }
 
     @Override
     protected void lazyLoad() {
-        if (MainActivity.SHOW_TWO_ANIM){
+        if (WelcomeActivity.SHOW_TWO_ANIM){
             mBgView.setVisibility(View.INVISIBLE);
             mShowView.setVisibility(View.INVISIBLE);
             mHeadView.setVisibility(View.INVISIBLE);

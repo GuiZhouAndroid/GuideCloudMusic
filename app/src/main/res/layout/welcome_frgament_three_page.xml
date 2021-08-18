@@ -7,7 +7,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
-        android:background="@drawable/a0c"
+        android:background="@mipmap/welcome_6"
         android:padding="1dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
@@ -15,12 +15,12 @@
         android:layout_height="wrap_content">
         <FrameLayout
             android:layout_width="wrap_content"
-            android:background="@color/colorWhite"
+            android:background="@color/welcome_colorWhite"
             android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/image_three_bg"
                 android:layout_width="wrap_content"
-                android:src="@mipmap/b44"
+                android:src="@mipmap/welcome_4"
                 android:animateLayoutChanges="true"
                 android:adjustViewBounds="true"
                 android:layout_height="wrap_content" />
@@ -28,7 +28,7 @@
             <ImageView
                 android:id="@+id/image_three_show"
                 android:layout_width="30dp"
-                android:src="@mipmap/b4_"
+                android:src="@mipmap/welcome_1"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:animateLayoutChanges="true"

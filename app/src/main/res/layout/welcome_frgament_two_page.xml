@@ -7,19 +7,19 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
-        android:background="@drawable/a0c"
+        android:background="@mipmap/welcome_6"
         android:padding="1dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:layout_height="wrap_content">
         <FrameLayout
             android:layout_width="wrap_content"
-            android:background="@color/colorWhite"
+            android:background="@color/welcome_colorWhite"
             android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/image_two_bg"
                 android:layout_width="wrap_content"
-                android:src="@mipmap/b43"
+                android:src="@mipmap/welcome_3"
                 android:animateLayoutChanges="true"
                 android:adjustViewBounds="true"
                 android:layout_height="wrap_content" />
@@ -36,7 +36,7 @@
             <ImageView
                 android:id="@+id/image_two_head"
                 android:layout_width="35dp"
-                android:src="@mipmap/b4_"
+                android:src="@mipmap/welcome_1"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="13dp"
                 android:animateLayoutChanges="true"
