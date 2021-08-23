@@ -51,25 +51,31 @@ public class WelcomeActivity extends AppCompatActivity {
         mTextPager = findViewById(R.id.main_text_pager);
         mImageViewPager = findViewById(R.id.main_image_pager);
         mTouchLayout = findViewById(R.id.main_touch_layout);
+
         mIndicatorOne = findViewById(R.id.main_indicator_one);
         mIndicatorTwo = findViewById(R.id.main_indicator_two);
         mIndicatorThree = findViewById(R.id.main_indicator_three);
         tv_login = findViewById(R.id.tv_login);
         tv_go = findViewById(R.id.tv_go);
         tv_welcome = findViewById(R.id.tv_welcome);
+
+
         try {
             Field field = ViewPager.class.getDeclaredField("mScroller");//反射
             field.setAccessible(true);
             FixedSpeedScroller scrollerText = new FixedSpeedScroller(this, new AccelerateInterpolator());
             field.set(mTextPager, scrollerText);
-            scrollerText.setmDuration(350);
+            scrollerText.setmDuration(350);//设置文字延时滑动
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         MyFragmentPagerAdapter fragmentPagerAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager());
         TextPagerAdapter textPagerAdapter = new TextPagerAdapter();
-        mTextPager.setAdapter(textPagerAdapter);
+
         mImageViewPager.setAdapter(fragmentPagerAdapter);
+        mTextPager.setAdapter(textPagerAdapter);
+
         mImageViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int i, float v, int i1) {
@@ -125,7 +131,6 @@ public class WelcomeActivity extends AppCompatActivity {
                         }
                         SHOW_TWO_ANIM = false;
                         mIndicatorThree.setImageDrawable(getResources().getDrawable(R.drawable.welcome_circle_main));//第三页滑动圆点
-
                         break;
 
                 }

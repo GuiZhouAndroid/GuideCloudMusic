@@ -15,7 +15,7 @@ import com.zs.itking.guidecloudmusic.fragment.FragmentTwoPage;
  * Created by wobiancao on 19/1/11.
  */
 public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
-    private final static int PAGE_COUNT = 3;
+    private final int PAGE_COUNT = 3;
 
     public MyFragmentPagerAdapter(FragmentManager fm) {
         super(fm);
